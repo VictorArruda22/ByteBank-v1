@@ -1,5 +1,5 @@
 fun main() {
-    testaContasDiferentes()
+    testaCondicoes(saldo = 0.0)
 }
 
 

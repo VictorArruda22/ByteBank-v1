@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c711a7d3-89d3-4861-ac72-7511a2370839" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kotlin-introducao-orientacao-a-objetos-aula-1/bytebank.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Gerente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Gerente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Analista.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Analista.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Autenticavel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Autenticavel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Auxiliar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Auxiliar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/CalculadoraBonificacao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/CalculadoraBonificacao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Cliente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Cliente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Conta.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Conta.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ContaCorrente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/ContaCorrente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ContaPoupanca.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/ContaPoupanca.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ContaSalario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/ContaSalario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Diretor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Diretor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Funcionario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Funcionario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FuncionarioAdmin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/FuncionarioAdmin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Gerente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Gerente.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/SistemaInterno.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/SistemaInterno.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Transfere.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/model/Transfere.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaAutenticacao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaAutenticacao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaComportamentos.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaComportamentos.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaCondicoes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaCondicoes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaContasDiferentes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaContasDiferentes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaCopiaEReferencias.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaCopiaEReferencias.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaFuncionarios.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaFuncionarios.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testaRepeticao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/teste/testaRepeticao.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +51,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -56,9 +75,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="" />
     </key>
