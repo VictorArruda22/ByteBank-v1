@@ -1,0 +1,31 @@
+package br.com.alura.bytebank.teste
+
+import br.com.alura.bytebank.model.Endereco
+
+fun testaAny(){
+
+val endereco = Endereco(
+    logradouro = "Rua vergueiro",
+    complemento = "Alura",
+    cep = "00000-00"
+)
+val enderecoNovo = Endereco(
+    logradouro = "Rua vergueiro",
+    complemento = "Alura",
+    cep = "00000-00"
+)
+
+println(endereco.equals(enderecoNovo))
+println(endereco.hashCode())
+println(enderecoNovo.hashCode())
+
+println(endereco)
+println()
+println(enderecoNovo)
+
+}
+
+fun imprime(valor: Any): Any{
+    println(valor)
+    return valor
+}
