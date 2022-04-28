@@ -7,7 +7,7 @@ fun testaContasDiferentes() {
         titular = Cliente(
             nome = "Alex",
             cpf = "",
-            senha = 11,
+            senha = 22,
             endereco = Endereco(logradouro = "Avenida reseda")
         ),
         numeroConta = 1000
@@ -26,7 +26,7 @@ fun testaContasDiferentes() {
         titular = Cliente(
             nome = "Santos",
             cpf = "",
-            senha = 33
+            senha = 22
         ),
         numeroConta = 2003
     )
@@ -47,7 +47,7 @@ fun testaContasDiferentes() {
     println("Valor após saque: ${contaPoupanca.saldo}")
     println("Valor após saque: ${contaSalario.saldo}")
 
-    contaCorrente.transfere(40.0, contaPoupanca)
+    contaCorrente.transfere(40.0, contaPoupanca, senha = 22)
 
     println("Valor poupança após transferência: ${contaPoupanca.saldo}")
 
