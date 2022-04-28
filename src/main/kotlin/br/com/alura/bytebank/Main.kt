@@ -1,19 +1,33 @@
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
 import br.com.alura.bytebank.model.Endereco
-
+import br.com.alura.bytebank.teste.testaAny
 fun main() {
-
-    val endereco = Endereco()
-
-    imprime(Unit)
-    imprime(endereco)
-    imprime(1.0)
-    imprime(1)
+    println("início main")
+    testaComportamentos()
+    println("fim main")
 }
 
-fun imprime(valor: Any): Any{
-    println(valor)
-    return valor
+fun funcao1(){
+    println("início funcao1")
+    try {
+        funcao2()
+    }catch (e: SaldoInsuficienteException){
+        e.printStackTrace()
+        println("SaldoInsuficienteException foi pegada")
+    }
+    println("fim funcao1")
 }
+
+fun funcao2() {
+    println("início funcao2")
+    for (i in 1..5){
+        println(i)
+        throw SaldoInsuficienteException()
+    }
+    println("fim funcao2")
+}
+
+
 
 
 
