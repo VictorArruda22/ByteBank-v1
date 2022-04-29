@@ -1,40 +1,19 @@
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
 import br.com.alura.bytebank.model.Endereco
 import br.com.alura.bytebank.teste.testaAny
+
+
 fun main() {
-    println("início main")
-        println("ArithmeticException foi pegada")
-    funcao1()
-    println("fim main")
-}
-fun funcao1(){
-    println("início funcao1")
-    funcao2()
-    println("fim funcao1")
-}
-
-fun funcao2() {
-    println("início funcao2")
-    for (i in 1..5){
-        println(i)
-        val endereco = Any()
-        try {
-            endereco as Endereco
-        } catch (e: ClassCastException){
-            println("ClassCastException foi pegada")
-        }
+    var enderecoNulo: Endereco? = Endereco(logradouro = "Rua teste", complemento = "prédio")
+    println(enderecoNulo?.logradouro)
+    enderecoNulo?.let {
+        println(it.logradouro.length)
+        val tamanhoComplemento: Int = it.complemento?.length ?: throw IllegalStateException("Complemento está vazio.")
+        println(tamanhoComplemento)
     }
-    println("fim funcao2")
+    teste("")
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+fun teste(valor: Any){
+    val numero: Int? = valor as? Int
+}
