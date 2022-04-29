@@ -5,10 +5,10 @@ Program created to learn in Kotlin
 
 Technologies multiplataform
 <div>
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" />  Kotlin
+   <ul>
+   <li><img align="center" alt="Victor-redis" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" />  Kotlin</li>
+	<li><img align="center" alt="Victor-redis" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-original.svg" /> <ul> Perl</li>
+	<li><img align="center" alt="Victor-redis" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /> Shell / Git</li>
+</ul>
 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /> Shell
-  
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/perl/perl-original.svg" /> Perl
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /> Git
 </div>
