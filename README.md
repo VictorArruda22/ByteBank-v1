@@ -1,2 +1,10 @@
 # ByteBank-v1
-Programa criado para aprendizado em Kotlin
+Program created to learn in Kotlin
+
+##
+
+Technologies multiplataform
+
+Kotlin
+Shell
+Git
