@@ -4,16 +4,19 @@ import br.com.alura.bytebank.teste.testaAny
 
 
 fun main() {
-    var enderecoNulo: Endereco? = Endereco(logradouro = "Rua teste", complemento = "prédio")
-    println(enderecoNulo?.logradouro)
-    enderecoNulo?.let {
-        println(it.logradouro.length)
-        val tamanhoComplemento: Int = it.complemento?.length ?: throw IllegalStateException("Complemento está vazio.")
-        println(tamanhoComplemento)
-    }
-    teste("")
+    val minhaFuncao: () -> Unit = ::teste
+    println(minhaFuncao())
+    val minhaFuncaoClasse: () -> Unit = Teste()
+    println(minhaFuncaoClasse())
 }
 
-fun teste(valor: Any){
-    val numero: Int? = valor as? Int
+fun teste(){
+    println("executa teste")
+}
+
+class Teste: () -> Unit{
+    override fun invoke() {
+        TODO("Not yet implemented")
+    }
+
 }
