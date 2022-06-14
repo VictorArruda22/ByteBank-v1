@@ -4,10 +4,18 @@ import br.com.alura.bytebank.teste.testaAny
 
 
 fun main() {
-    val minhaFuncao: () -> Unit = ::teste
-    println(minhaFuncao())
+    testaTipoFuncaoReferencia()
+    testaTipoFuncaoClasse()
+}
+
+fun testaTipoFuncaoClasse() {
     val minhaFuncaoClasse: () -> Unit = Teste()
     println(minhaFuncaoClasse())
+}
+
+fun testaTipoFuncaoReferencia() {
+    val minhaFuncao: () -> Unit = ::teste
+    println(minhaFuncao())
 }
 
 fun teste(){
