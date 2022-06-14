@@ -1,19 +1,32 @@
-import br.com.alura.bytebank.exception.SaldoInsuficienteException
-import br.com.alura.bytebank.model.Endereco
-import br.com.alura.bytebank.teste.testaAny
-
-
 fun main() {
-    var enderecoNulo: Endereco? = Endereco(logradouro = "Rua teste", complemento = "prédio")
-    println(enderecoNulo?.logradouro)
-    enderecoNulo?.let {
-        println(it.logradouro.length)
-        val tamanhoComplemento: Int = it.complemento?.length ?: throw IllegalStateException("Complemento está vazio.")
-        println(tamanhoComplemento)
+//    testaTipoFuncaoReferencia()
+//    testaTipoFuncaoClasse()
+    val minhaFuncaoLambda = { a: Int, b: Int ->
+        a + b
     }
-    teste("")
+    println(minhaFuncaoLambda(5, 10))
+
+    val minhaFuncaoAnonima: (Int, Int) -> Int = fun(a, b): Int{
+        return a + b
+    }
+    println(minhaFuncaoAnonima(5, 10))
 }
 
-fun teste(valor: Any){
-    val numero: Int? = valor as? Int
+fun testaTipoFuncaoClasse() {
+    val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
+    println(minhaFuncaoClasse(5, 10))
+}
+
+fun testaTipoFuncaoReferencia() {
+    val minhaFuncao: (Int, Int) -> Int = ::soma
+    println(minhaFuncao(5, 10))
+}
+
+fun soma(a: Int, b: Int): Int{
+    return a + b
+}
+
+class Soma: (Int, Int) -> Int{
+    override fun invoke(a: Int, b: Int): Int = a + b
+
 }
