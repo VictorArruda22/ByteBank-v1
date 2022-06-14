@@ -1,30 +1,31 @@
-import br.com.alura.bytebank.exception.SaldoInsuficienteException
-import br.com.alura.bytebank.model.Endereco
-import br.com.alura.bytebank.teste.testaAny
-
-
 fun main() {
     testaTipoFuncaoReferencia()
     testaTipoFuncaoClasse()
+//    val minhaFuncaoLambda = {
+//        println("Executa como lambda")
+//    }
+//    println(minhaFuncaoLambda())
+//    val minhaFuncaoAnonima: () -> Unit = fun(){
+//        println("Executa como anonima")
+//    }
+//    println(minhaFuncaoAnonima())
 }
 
 fun testaTipoFuncaoClasse() {
-    val minhaFuncaoClasse: () -> Unit = Teste()
-    println(minhaFuncaoClasse())
+    val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
+    println(minhaFuncaoClasse(5, 10))
 }
 
 fun testaTipoFuncaoReferencia() {
-    val minhaFuncao: () -> Unit = ::teste
-    println(minhaFuncao())
+    val minhaFuncao: (Int, Int) -> Int = ::soma
+    println(minhaFuncao(5, 10))
 }
 
-fun teste(){
-    println("executa teste")
+fun soma(a: Int, b: Int): Int{
+    return a + b
 }
 
-class Teste: () -> Unit{
-    override fun invoke() {
-        TODO("Not yet implemented")
-    }
+class Soma: (Int, Int) -> Int{
+    override fun invoke(a: Int, b: Int): Int = a + b
 
 }
