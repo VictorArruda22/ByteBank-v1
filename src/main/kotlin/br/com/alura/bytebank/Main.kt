@@ -1,32 +1,24 @@
+package br.com.alura.bytebank
+
+import br.com.alura.bytebank.model.Endereco
+
 fun main() {
-//    testaTipoFuncaoReferencia()
-//    testaTipoFuncaoClasse()
-    val minhaFuncaoLambda = { a: Int, b: Int ->
-        a + b
-    }
-    println(minhaFuncaoLambda(5, 10))
+//    val endereco = Endereco(logradouro = "rua vergueiro", numero = 4545)
+//    val enderecoEmMaiusculo = "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+//    println(enderecoEmMaiusculo)
 
-    val minhaFuncaoAnonima: (Int, Int) -> Int = fun(a, b): Int{
-        return a + b
-    }
-    println(minhaFuncaoAnonima(5, 10))
+    Endereco(logradouro = "rua vergueiro", numero = 4545)
+        .let {
+        endereco -> "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+    }.let(::println)
+
+    listOf(Endereco(complemento = "casa"),
+    Endereco(),
+    Endereco(complemento = "apartamento"))
+        .filter { endereco -> endereco.complemento.isNotEmpty() }
+        .let(::println)
 }
 
-fun testaTipoFuncaoClasse() {
-    val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
-    println(minhaFuncaoClasse(5, 10))
-}
 
-fun testaTipoFuncaoReferencia() {
-    val minhaFuncao: (Int, Int) -> Int = ::soma
-    println(minhaFuncao(5, 10))
-}
 
-fun soma(a: Int, b: Int): Int{
-    return a + b
-}
 
-class Soma: (Int, Int) -> Int{
-    override fun invoke(a: Int, b: Int): Int = a + b
-
-}
