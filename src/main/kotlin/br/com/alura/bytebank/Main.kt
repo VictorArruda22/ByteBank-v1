@@ -1,32 +1,42 @@
+package br.com.alura.bytebank
+
+import br.com.alura.bytebank.model.Autenticavel
+import br.com.alura.bytebank.model.Endereco
+import br.com.alura.bytebank.model.SistemaInterno
+
 fun main() {
-//    testaTipoFuncaoReferencia()
-//    testaTipoFuncaoClasse()
-    val minhaFuncaoLambda = { a: Int, b: Int ->
-        a + b
+//    val endereco = Endereco(logradouro = "rua vergueiro", numero = 4545)
+//    val enderecoEmMaiusculo = "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+//    println(enderecoEmMaiusculo)
+
+    Endereco(logradouro = "rua vergueiro", numero = 4545)
+        .let {
+        endereco -> "${endereco.logradouro}, ${endereco.numero}".toUpperCase()
+    }.let(::println)
+
+    listOf(Endereco(complemento = "casa"),
+    Endereco(),
+    Endereco(complemento = "apartamento"))
+        .filter (predicate = { endereco -> endereco.complemento.isNotEmpty() })
+        .let(block = (::println))
+
+    soma(1, 5, resultado = (::println))
+
+    val autenticavel = object : Autenticavel{
+        val senha = 1234
+        override fun autentica(senha: Int) = this.senha == senha
     }
-    println(minhaFuncaoLambda(5, 10))
 
-    val minhaFuncaoAnonima: (Int, Int) -> Int = fun(a, b): Int{
-        return a + b
-    }
-    println(minhaFuncaoAnonima(5, 10))
+    SistemaInterno().entra(autenticavel, senha = 1234, autenticado = {
+        println("Realizar pagamento")
+    })
 }
 
-fun testaTipoFuncaoClasse() {
-    val minhaFuncaoClasse: (Int, Int) -> Int = Soma()
-    println(minhaFuncaoClasse(5, 10))
+fun soma(a: Int, b: Int, resultado: (Int) -> Unit){
+    println("Soma sendo efetuada")
+    resultado(a + b)
 }
 
-fun testaTipoFuncaoReferencia() {
-    val minhaFuncao: (Int, Int) -> Int = ::soma
-    println(minhaFuncao(5, 10))
-}
 
-fun soma(a: Int, b: Int): Int{
-    return a + b
-}
 
-class Soma: (Int, Int) -> Int{
-    override fun invoke(a: Int, b: Int): Int = a + b
 
-}
